@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Segundo mês</title>
+  </head>
+  <body>
+    <p class="introduçao"></p>
+    <h1>LOCAL RESTRITO</h1>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("imageModal");
+
+      // Get the image and insert it inside the modal
+      var modalImg = document.getElementById("modalImage");
+      var images = document.querySelectorAll(".IMG");
+
+      images.forEach(function (img) {
+        img.onclick = function () {
+          modal.style.display = "flex";
+          modalImg.src = this.src;
+        };
+      });
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal content, close it
+      modal.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
