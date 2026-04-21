@@ -89,6 +89,39 @@ img.IMG:hover {
   cursor: pointer;
 }
 
+.link_botao {
+  display: inline-block;
+
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: 70%;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-shadow: #0cf;
+}
+
+.link_botao a {
+  margin: 3px;
+  text-decoration: none;
+  color: #0cf;
+}
+
+.fim {
+  background: #23423d50;
+  color: #f3f4f3;
+  font-family: Georgia, serif;
+  margin: 0;
+  max-width: 1000px;
+}
+
+:root {
+  --color: #0cf;
+}
+
 body > div {
   margin-bottom: 1rem;
 }
