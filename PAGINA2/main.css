@@ -1,107 +1,67 @@
-.introduçao {
-  size: 2px;
-  font-size: small;
-  color: #8a9c9954;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Segundo mês</title>
+  </head>
+  <body>
+    <p class="introduçao"></p>
+    <h1>SEGUNDO MÊS</h1>
 
-body {
-  background-color: #181b1e;
-  color: #f3f4f3;
-  font-family: Georgia, serif;
-  margin: 0;
-  padding: 40px 24px;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.75;
-}
-body.div {
-  margin-bottom: 1rem;
-  background-color: #20242700;
-}
+    <div>
+      <h3 class="DIA">dia 1</h3>
+      <p class="AFA">
+        Nao sei como introduzir isso, cof cof <br />
+        man, falamos por tipo 3h-4h seguidas. n chega perto do record da gente
+        MUAHHA (9h) bom, converçamos mt hj entao n tenho muita coisa a comentar
+        de novo, apenas, MUITO OBTIGADO ELOOO POR TUDOO!!!, estamos juntos a
+        certa de 3 meses e é um enorme avanço, respondi as coisas que tinha pra
+        te responder e mandei no disco, MANNN UMMUMU te amo slk, cof cof, a
+        previsao pra amanha é eu teminar o relatorio e ja começar o ultimo
+        modulo oq eu tenho que ver 2 de uma vez, tenho 3 dias antes da provas e
+        to é lascado BRUHHHH n deu as 2 semanas para fazer as bagaça pq a prova
+        foi adiantada a minha, teoricamene tenho que assianar presença no meio
+        do ano que é melhor NAAA. bom, BOM DIA MINHA LINDAAAA, obrigado por mais
+        um messs
+      </p>
+    </div>
 
-h1 {
-  font-size: 3rem;
-  line-height: 1.05;
-  margin: 0 0 1.5rem;
-  color: #f3f4f3;
-  text-align: center;
-}
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
 
-h3 {
-  color: #cdd8d6;
-  font-size: 1.4rem;
-  margin: 2.5rem 0 0.8rem;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-}
+    <script>
+      // Get the modal
+      var modal = document.getElementById("imageModal");
 
-p {
-  margin: 0 0 1.5rem;
-  color: #e3e6e5;
-  font-size: 1rem;
-  text-align: left;
-}
+      // Get the image and insert it inside the modal
+      var modalImg = document.getElementById("modalImage");
+      var images = document.querySelectorAll(".IMG");
 
-img.IMG {
-  max-width: 100%;
-  display: block;
-  margin: auto;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
+      images.forEach(function (img) {
+        img.onclick = function () {
+          modal.style.display = "flex";
+          modalImg.src = this.src;
+        };
+      });
 
-img.IMG:hover {
-  transform: scale(1.02);
-}
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
 
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(20, 24, 28, 0.96);
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
 
-.modal-content {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
-  outline: 2px solid #ced7d5;
-}
-
-.close {
-  position: absolute;
-  top: 18px;
-  right: 24px;
-  color: #e7ebea;
-  font-size: 36px;
-  font-weight: bold;
-  cursor: pointer;
-}
-body > div {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-  body {
-    padding: 24px 16px;
-  }
-
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-}
+      // When the user clicks anywhere outside of the modal content, close it
+      modal.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
